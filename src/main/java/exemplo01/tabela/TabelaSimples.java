@@ -35,4 +35,8 @@ public class TabelaSimples extends JFrame{
 		setTitle("Exemplo simples de tabela");
 	}
 	
+	public void criarJanela(){
+		
+	}
+	
 }
