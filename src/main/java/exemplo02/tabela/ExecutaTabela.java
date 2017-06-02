@@ -6,12 +6,16 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.table.TableModel;
+
 import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
 import javax.swing.JButton;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 /**
  * By: Jhonatan Mattana
@@ -21,6 +25,7 @@ public class ExecutaTabela extends JFrame {
 
 	private JPanel contentPane;
 	private JTable tabela;
+	private ContatoModel modelo = new ContatoModel();
 
 	/**
 	 * Launch the application.
@@ -69,6 +74,11 @@ public class ExecutaTabela extends JFrame {
 		panel.setLayout(gbl_panel);
 		
 		JButton btnIniciarTabela = new JButton("Iniciar Tabela");
+		btnIniciarTabela.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				iniciarTabela();
+			}
+		});
 		GridBagConstraints gbc_btnIniciarTabela = new GridBagConstraints();
 		gbc_btnIniciarTabela.fill = GridBagConstraints.HORIZONTAL;
 		gbc_btnIniciarTabela.gridx = 0;
@@ -97,6 +107,11 @@ public class ExecutaTabela extends JFrame {
 		
 		tabela = new JTable();
 		scrollPane.setViewportView(tabela);
+	}
+
+	protected void iniciarTabela() {
+		
+		tabela.setModel(modelo );
 	}
 
 }
