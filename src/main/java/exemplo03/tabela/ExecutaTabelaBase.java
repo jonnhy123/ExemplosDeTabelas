@@ -20,7 +20,8 @@ import javax.swing.JTable;
 public class ExecutaTabelaBase extends JFrame {
 
 	private JPanel contentPane;
-	private JTable tabela;
+	protected JTable tabela;
+	protected JButton btnIniciarTabela;
 
 	/**
 	 * Create the frame.
@@ -53,7 +54,7 @@ public class ExecutaTabelaBase extends JFrame {
 		gbl_panelBotao.rowWeights = new double[]{0.0, Double.MIN_VALUE};
 		panelBotao.setLayout(gbl_panelBotao);
 		
-		JButton btnIniciarTabela = new JButton("Iniciar Tabela");
+		btnIniciarTabela = new JButton("Iniciar Tabela");
 		GridBagConstraints gbc_btnIniciarTabela = new GridBagConstraints();
 		gbc_btnIniciarTabela.fill = GridBagConstraints.HORIZONTAL;
 		gbc_btnIniciarTabela.gridx = 0;

@@ -1,6 +1,8 @@
 package exemplo03.tabela;
 
 import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
 
@@ -10,7 +12,24 @@ import javax.swing.JFrame;
  */
 public class ExecutaTabela extends ExecutaTabelaBase{
 
+	public ExecutaTabela() {
+		super();
+		configuarBotao();
+	}
 	
+	private void configuarBotao() {
+		super.btnIniciarTabela.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				iniciarTabela();
+			}
+		});
+	}
+
+	protected void iniciarTabela() {
+		PessoaModel modelo = new PessoaModel();
+		tabela.setModel(modelo);
+	}
+
 	/**
 	 * Launch the application.
 	 */
