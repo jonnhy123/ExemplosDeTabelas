@@ -1,5 +1,7 @@
 package exemplo01.tabela;
 
+import java.awt.GridLayout;
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
@@ -36,7 +38,16 @@ public class TabelaSimples extends JFrame{
 	}
 	
 	public void criarJanela(){
+		painelFundo = new JPanel();
+		painelFundo.setLayout(new GridLayout(1, 1));
+		tabela = new JTable(dados, colunas);
+		barraDeRolagem = new JScrollPane(tabela);
+		painelFundo.add(barraDeRolagem);
 		
+		getContentPane().add(painelFundo);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setSize(550, 253);
+		setVisible(true);
 	}
 	
 }
