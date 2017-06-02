@@ -50,4 +50,8 @@ public class TabelaSimples extends JFrame{
 		setVisible(true);
 	}
 	
+	public static void main(String[] args) {
+		TabelaSimples ts = new TabelaSimples();
+		ts.criarJanela();
+	}
 }
