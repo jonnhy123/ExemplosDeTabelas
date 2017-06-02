@@ -30,6 +30,9 @@ public class TabelaSimples extends JFrame{
 	};
 	
 	String[] colunas = {"Nome","Telefone","E-Mail"};
-	
+
+	public TabelaSimples() {
+		setTitle("Exemplo simples de tabela");
+	}
 	
 }
