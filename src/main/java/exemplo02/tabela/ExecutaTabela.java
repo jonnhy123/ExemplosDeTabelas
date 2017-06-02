@@ -48,7 +48,7 @@ public class ExecutaTabela extends JFrame {
 	 */
 	public ExecutaTabela() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 450, 263);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -118,7 +118,7 @@ public class ExecutaTabela extends JFrame {
 			
 			p.setId(i);
 			p.setNome("Nome_"+i);
-			p.setIdade(8+i);
+			p.setIdade(3*i);
 			p.setPais("Brasil");
 			p.setEstado("Paraná");
 			p.setCidade("Cascavel");
