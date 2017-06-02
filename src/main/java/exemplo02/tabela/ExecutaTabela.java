@@ -111,7 +111,20 @@ public class ExecutaTabela extends JFrame {
 
 	protected void iniciarTabela() {
 		
-		tabela.setModel(modelo );
+		tabela.setModel(modelo);
+		
+		for (int i = 1; i <= 10; i++) {
+			Pessoa p = new Pessoa();
+			
+			p.setId(i);
+			p.setNome("Nome_"+i);
+			p.setIdade(8+i);
+			p.setPais("Brasil");
+			p.setEstado("Paraná");
+			p.setCidade("Cascavel");
+		
+			this.modelo.adicionaNaTabela(p);
+		}
 	}
 
 }
