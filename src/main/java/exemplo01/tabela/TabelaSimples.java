@@ -28,4 +28,8 @@ public class TabelaSimples extends JFrame{
 			{"João da Silva", "48 8890-3345", "joaosilva@hotmail.com"},
 			{"Pedro Cascaes", "48 9870-5634", "pedrinho@gmail.com"}
 	};
+	
+	String[] colunas = {"Nome","Telefone","E-Mail"};
+	
+	
 }
