@@ -22,29 +22,16 @@ import javax.swing.JTable;
 public class ExecutaTabelaBase extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField txtId;
-	private JTextField txtIdade;
-	private JTextField txtPais;
-	private JTextField txtEstado;
-	private JTextField txtCidade;
-	private JTable tabela;
-	private JTextField txtNome;
-
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					ExecutaTabelaBase frame = new ExecutaTabelaBase();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+	protected JTextField txtId;
+	protected JTextField txtIdade;
+	protected JTextField txtPais;
+	protected JTextField txtEstado;
+	protected JTextField txtCidade;
+	protected JTable tabela;
+	protected JTextField txtNome;
+	protected JButton btnExcluir;
+	protected JButton btnSalvar;
+	protected JButton btnNovo;
 
 	/**
 	 * Create the frame.
@@ -190,7 +177,7 @@ public class ExecutaTabelaBase extends JFrame {
 		gbl_panelBtn.rowWeights = new double[]{0.0, Double.MIN_VALUE};
 		panelBtn.setLayout(gbl_panelBtn);
 		
-		JButton btnNovo = new JButton("Novo");
+		btnNovo = new JButton("Novo");
 		GridBagConstraints gbc_btnNovo = new GridBagConstraints();
 		gbc_btnNovo.fill = GridBagConstraints.HORIZONTAL;
 		gbc_btnNovo.insets = new Insets(0, 0, 0, 5);
@@ -198,7 +185,7 @@ public class ExecutaTabelaBase extends JFrame {
 		gbc_btnNovo.gridy = 0;
 		panelBtn.add(btnNovo, gbc_btnNovo);
 		
-		JButton btnSalvar = new JButton("Salvar");
+		btnSalvar = new JButton("Salvar");
 		GridBagConstraints gbc_btnSalvar = new GridBagConstraints();
 		gbc_btnSalvar.fill = GridBagConstraints.HORIZONTAL;
 		gbc_btnSalvar.insets = new Insets(0, 0, 0, 5);
@@ -206,7 +193,7 @@ public class ExecutaTabelaBase extends JFrame {
 		gbc_btnSalvar.gridy = 0;
 		panelBtn.add(btnSalvar, gbc_btnSalvar);
 		
-		JButton btnExcluir = new JButton("Excluir");
+		btnExcluir = new JButton("Excluir");
 		GridBagConstraints gbc_btnExcluir = new GridBagConstraints();
 		gbc_btnExcluir.fill = GridBagConstraints.HORIZONTAL;
 		gbc_btnExcluir.gridx = 2;
