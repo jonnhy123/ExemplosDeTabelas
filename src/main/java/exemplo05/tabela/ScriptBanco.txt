@@ -1,0 +1,5 @@
+CREATE TABLE produto(
+	id INT PRIMARY KEY NOT NULL,
+	nome VARCHAR(40),
+	telefone VARCHAR(20)
+);
